@@ -2,28 +2,44 @@
  
 let correctAnswer=0;
 
+
+function getName() {
 let name =prompt("Kindly, what is your name ? ");
-alert ("welcom to our website "+name);
+alert ("welcome to our website "+name);
 
+return name;
+}
 
-let choose1=prompt("Do you think I am a female ? y/n");
-let choo1="n";
+function getQuastion1 () {
+let choose1=prompt("Do you think I am a man ?  yes-no").toLowerCase();
+let correctReply="y";
+while (choose1 !== "yes" && choose1 !=='y' && choose1 !=='no' && choose1 !=='n'){
+alert("Please enter y-n or yes-no")
+choose1=prompt("Do you think I am a man").toLowerCase();
 
-if (choo1.localeCompare(choose1.toLowerCase())==0){
+}
+
+if (correctReply===choose1){
 alert("you are smart");
 //console.log("right answer");
 correctAnswer++;
-
 }
 
 else
 alert("you are not lucky this time")
 
+}
+
+ function getQuestion2 () {
+let choose2=prompt("Do you think  I am engineer ? yes-no").toLowerCase();
 
 
-let choose2=prompt("Do you think  I am engineer ? y/n");
-let choo2="y";
-if (choo2.localeCompare(choose2.toLowerCase())==0){
+while (choose2 !== "yes" && choose2 !=='y' && choose2!=='no' && choose2 !=='n'){
+alert("Please enter y-n or yes-no")
+ choose2=prompt("Do you think  I am engineer ?").toLowerCase();
+}
+
+if (choose2 === "yes" ||choose2==="y"){
 //console.log("right answer");
 
 alert("you are very smart ");
@@ -32,15 +48,28 @@ correctAnswer++;
 }
 else{
 alert("you are not lucky this time");
+
+
 //console.log("wrong answer");
 
 }
-let choose3=prompt("Do you think  I am civil engineer ? y/n");
-let choo3="n";
-if (choo3.localeCompare(choose3.toLowerCase())==0){
+
+}
+
+
+function getQuestion3(){
+let choose=prompt("Do you think  I am civil engineer ? yes-no ").toLowerCase();
+
+
+while (choose !== "yes" && choose !=='y' && choose!=='no' && choose !=='n'){
+alert("Please enter y-n or yes-no")
+choose =prompt("Do you think  I am civil engineer ? yes-no").toLowerCase();
+}
+ 
+if (choose ==="no"||choose ==="n") {
 //console.log("right answer");
 
-alert("you are very very smart,I am telecom engineer ");
+alert("you are very very smart, I am telecom engineer ");
 correctAnswer++;
 
 }
@@ -50,9 +79,20 @@ alert("you are not lucky this time, I am telecom engineer");
 
 }
 
-let choose4=prompt("Do you think  7 is my fav number ?");
-let choo4="y";
-if (choo4.localeCompare(choose4.toLowerCase())==0){
+}
+
+function getQuestion4(){
+
+let choose=prompt("Do you think  7 is my fav number ? yes-no").toLowerCase();
+
+
+
+while (choose !== "yes" && choose !=='y' && choose!=='no' && choose !=='n'){
+alert("Please enter y-n or yes-no")
+choose =prompt("Do you think  7 is my fav number ? yes-no").toLowerCase();
+
+}
+ if (choose==='y'||choose==='yes') {
 
 alert("you are very smart ");
 //console.log("right answer");
@@ -65,10 +105,19 @@ alert("you are not lucky this time");
 
 }
 
-let choose5=prompt("Do you think I am living in Amman ? y/n");
-let choo5="n";
-if (choo5.localeCompare(choose5.toLowerCase())==0) {
-alert("you are very very smart, i am living in irbid ");
+}
+
+function getQuestion5(){
+
+let choose=prompt("Do you think I am living in Amman ?yes-no ").toLowerCase();
+while (choose !== "yes" && choose !=='y' && choose!=='no' && choose !=='n'){
+alert("Please enter y-n or yes-no")
+choose =prompt("Do you think I am living in Amman ? yes-no").toLowerCase();
+
+}
+
+if (choose==="n"||choose==="no") {
+alert("you are very very smart, I am living in irbid ");
 correctAnswer++;
 //console.log("right answer");
 
@@ -80,11 +129,13 @@ alert("you are not lucky this time");
 
 }
 
+}
+function getQuestion6(){
 let counter=1;
 let trueNumber=5;
-while (counter <=4) {
+while (counter <5) {
 
-let guessedNumber=prompt("try to guess a number between 1-10");
+let guessedNumber=prompt("Try to guess a number between 1-10");
 
 if (trueNumber ==guessedNumber) {
 alert("Right guess it is 5");
@@ -92,6 +143,7 @@ correctAnswer++;
 //console.log("right answer");
 
 break;}
+
 else if (trueNumber <guessedNumber) {
 alert("too high");
 //console.log("wrong answer");
@@ -104,13 +156,17 @@ counter++;
 }
 
 }
+if (counter ==5) {
 alert("Ther right guess is 5")
 
+}
+}
 
+function getQuestion7() {
 
 let possibleChoices=['C','K','M'];
 
-let counter2=1;
+let counter=1;
 
 while(counter<=6){
 
@@ -131,10 +187,28 @@ counter++;
 }
 
 }
+
+if (counter==7){
 alert("The true values are C,K,M ");
+}
+}
+
+ 
+
+getName() ;
+getQuastion1 ();
+
+ getQuestion2 ();
+
+ getQuestion3();
+
+  getQuestion4() ;
+
+  getQuestion5();
+
+   getQuestion6();
+
+   getQuestion7();
 
 
 alert("Thanks for visiting our website "+name+"  Number of correct answers were "+ correctAnswer +"/7") ;
-
-
-
