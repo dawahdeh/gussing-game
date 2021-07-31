@@ -2,23 +2,44 @@
 
 
 #yellowp {
-    color: rgb(238, 9, 9);
+    color: rgb(197, 10, 10);
   }
+
+
+  h3.hcolor {
+
+color :green ;
+
+
+  }
+
+  ol.C{
+
+color :blue;
+
+  }
+
+#greencolor{
+
+
+  
+
+  color :green; 
+}
 
 
 
   body {
-    background-color: lightblue;
+    background-color: rgb(220, 230, 173);
   }
 
 
 
 
 img {
-    width: 60%;
+    width: 200px;
+    height: 200px;
     position: center;
-    
-
-    transform: translate(20%, 20%);
+  
   }
 
